@@ -1,6 +1,6 @@
 Name:		texlive-fancyqr
-Version:	64182
-Release:	2
+Version:	70935
+Release:	1
 Summary:	Fancy QR-Codes with TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fancyqr
