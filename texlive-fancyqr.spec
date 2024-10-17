@@ -3,7 +3,7 @@ Version:	70935
 Release:	1
 Summary:	Fancy QR-Codes with TikZ
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fancyqr
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fancyqr
 License:	gpl3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fancyqr.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fancyqr.doc.r%{version}.tar.xz
