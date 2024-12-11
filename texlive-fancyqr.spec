@@ -1,5 +1,5 @@
 Name:		texlive-fancyqr
-Version:	70935
+Version:	72986
 Release:	1
 Summary:	Fancy QR-Codes with TikZ
 Group:		Publishing
