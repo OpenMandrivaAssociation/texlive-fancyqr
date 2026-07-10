@@ -1,36 +1,23 @@
-Name:		texlive-fancyqr
-Version:	72986
-Release:	1
+%global tl_name fancyqr
+%global tl_revision 78199
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.3
+Release:	%{tl_revision}.1
 Summary:	Fancy QR-Codes with TikZ
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fancyqr
-License:	gpl3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fancyqr.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fancyqr.doc.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/fancyqr
+License:	lppl1.3c
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fancyqr.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fancyqr.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A simple package to create fancy QR-codes with the help of the
-qrcode package.
+A simple package to create fancy QR-codes with the help of the qrcode
+package (no PGF/TikZ used).
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/fancyqr
-%doc %{_texmfdistdir}/doc/latex/fancyqr
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
